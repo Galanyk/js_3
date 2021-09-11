@@ -10,8 +10,6 @@ function calculator(){
     function choiseOperation () {
         while(true) {
             inputOperation = prompt('Enter math operation');
-            //The use this method for training function "Include",
-            // but expression with ranges more flexible, so I created numbers array.
             if(MATH_OPERATIONS.includes(inputOperation)) {
             break;
             }
@@ -22,6 +20,9 @@ function calculator(){
     function numberOperants () {
         while (true)  {  
             countOperands = prompt('Enter number from 2 to 4');  
+            //The use this method for training function "Include"  
+            //so I created numbers array,
+            // but expression with ranges more flexible.
             if(OPERANDS.includes(+countOperands)){
             break;
             }
@@ -32,11 +33,11 @@ function calculator(){
     function inputOperants() {
         while(numbers.length < +countOperands) {
             let number = prompt('Enter number');
-            if((+number || +number === 0) && number !== ''){
-                if(inputOperation === '/' && +number === 0){
+            if((+number || +number === 0) && !number.includes(' ')){
+              if(inputOperation === '/' && +number === 0){
                     alert('Wrong number!!!');  
                 }
-                else{
+              else{
                     numbers.push(number);
                 }  
             } 
@@ -80,7 +81,7 @@ function calculator(){
         }
         alert(expression + ' = ' + result);
     }
-
+    
     choiseOperation();
     numberOperants();
     inputOperants();
