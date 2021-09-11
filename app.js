@@ -10,6 +10,8 @@ function calculator(){
     function choiseOperation () {
         while(true) {
             inputOperation = prompt('Enter math operation');
+            //The use this method for training function "Include",
+            // but expression with ranges more flexible, so I created numbers array.
             if(MATH_OPERATIONS.includes(inputOperation)) {
             break;
             }
@@ -78,7 +80,7 @@ function calculator(){
         }
         alert(expression + ' = ' + result);
     }
-    
+
     choiseOperation();
     numberOperants();
     inputOperants();
