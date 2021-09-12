@@ -3,7 +3,6 @@ function calculator(){
     let inputOperation = 0;
     let countOperands = 0;
     let numbers = [];
-
     const MATH_OPERATIONS= ['+', '-', '/', '*'];
     const OPERANDS = [2, 3, 4];
 
@@ -20,9 +19,8 @@ function calculator(){
     function numberOperants () {
         while (true)  {  
             countOperands = prompt('Enter number from 2 to 4');  
-            //The use this method for training function "Include"  
-            //so I created numbers array,
-            // but expression with ranges more flexible.
+            //In this I use function "includes" for training.
+            // Exspression with ranges more flexible.
             if(OPERANDS.includes(+countOperands)){
             break;
             }
@@ -50,7 +48,6 @@ function calculator(){
     function resultOperations() {
         let result = +numbers[0];
         let expression = numbers[0];
-        let operation;
         let index = 1;
         while(index < numbers.length){
            switch(inputOperation){
