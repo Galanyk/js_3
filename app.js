@@ -3,7 +3,6 @@ function calculator(){
     let inputOperation = 0;
     let countOperands = 0;
     let numbers = [];
-
     const MATH_OPERATIONS= ['+', '-', '/', '*'];
     const OPERANDS = [2, 3, 4];
 
@@ -50,7 +49,6 @@ function calculator(){
     function resultOperations() {
         let result = +numbers[0];
         let expression = numbers[0];
-        let operation;
         let index = 1;
         while(index < numbers.length){
            switch(inputOperation){
