@@ -19,7 +19,7 @@ function calculator(){
     function numberOperants () {
         while (true)  {  
             countOperands = prompt('Enter number from 2 to 4');  
-            //In this I use function "includes" for training.
+            //In this case I use function "includes" for training.
             // Exspression with ranges more flexible.
             if(OPERANDS.includes(+countOperands)){
             break;
