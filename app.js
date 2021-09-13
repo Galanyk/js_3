@@ -48,34 +48,31 @@ function calculator(){
     function resultOperations() {
         let result = +numbers[0];
         let expression = numbers[0];
-        let index = 1;
-        while(index < numbers.length){
+       
+        for(let index = 1; index < numbers.length; ++index){
            switch(inputOperation){
                 case'+': 
                     result += +numbers[index]; 
                     expression += ' + ' + numbers[index]; 
-                    ++index;
                 break;
 
                 case'-': 
                     result -= +numbers[index]; 
                     expression += ' - ' + numbers[index];
-                    ++index;
                 break;
 
                 case'*': 
                     result *= +numbers[index];
                     expression += ' * ' + numbers[index];
-                    ++index; 
                 break;
 
                 case'/': 
                     result /= +numbers[index];
                     expression += ' / ' + numbers[index]; 
-                    ++index;
                 break;
             }
         }
+     
         alert(expression + ' = ' + result);
     }
     
